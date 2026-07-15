@@ -504,6 +504,10 @@ static void imgui_build_widgets() {
                 if (ImGui::MenuItem("Textbox Editor", NULL, show_window_dialog)) show_window_dialog = !show_window_dialog;
                 if (ImGui::MenuItem("Timeline", NULL, show_window_timeline)) show_window_timeline = !show_window_timeline;
                 ImGui::Separator();
+                
+                ImGui::Checkbox("Hide HUD", &hide_hud);
+                //ImGui::BeginDisabled(!hide_hud);
+                
                 ImGui::Checkbox("Show Wireframes", &wireframe_mode);
                 ImGui::EndMenu();
             }
